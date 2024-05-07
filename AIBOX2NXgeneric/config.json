@@ -1,0 +1,10 @@
+{
+  "connection": {
+    "host": "127.0.0.1",
+    "ac": "admin",
+	"password":"(password)",
+	"nx_server":"7001",
+	"integration_server_port":3001
+  },
+  "api_type": "caption"
+}
