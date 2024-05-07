@@ -3,7 +3,7 @@ const multer = require('multer');
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const configPath = path.join(__dirname, 'config.json');
+const configPath = './config.json';
 if (!fs.existsSync(configPath)) {
   console.log('找不到文件: config.json');
   console.log('關閉程式...');
