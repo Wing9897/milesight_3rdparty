@@ -4,11 +4,15 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const configPath = path.join(__dirname, 'config.json');
+if (!fs.existsSync(configPath)) {
+  console.log('找不到文件: config.json');
+  console.log('關閉程式...');
+  process.exit(1);
+}
 const configData = fs.readFileSync(configPath, 'utf-8');
 const config = JSON.parse(configData);
 
 console.log(config);
-
 let host = config.connection.host;
 let authorization = `${config.connection.ac}:${config.connection.password}`
 
